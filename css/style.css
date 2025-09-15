@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #34d399;
+    --accent-color: #1a4a42;
+    --background-color: #0d2a24;
+    --text-color: #e0e0e0;
+    --light-text-color: #a8b2b0;
+    --card-bg-color: #1b3c35;
+    --border-color: #2a5249;
+}
+body {
+    font-family: 'Cairo', sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-color: var(--background-color); color: var(--text-color); line-height: 1.8; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+h1, h2, h3 { color: var(--primary-color); font-weight: 700; }
+h2 { font-size: 2.2rem; text-align: center; margin-bottom: 50px; }
+section, .hero { padding: 80px 0; }
+.hero { border-bottom: 1px solid var(--border-color); }
+section { border-bottom: 1px solid var(--border-color); }
+section:last-of-type { border-bottom: none; }
+
+.hero { background-color: var(--card-bg-color); }
+.hero .container {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;
+}
+.hero-text { max-width: 550px; }
+.hero-text h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 10px; }
+.hero-text .specialty { font-size: 1.3rem; color: var(--secondary-color); margin-bottom: 20px; font-weight: 600; }
+.hero-text .tagline { font-size: 1.1rem; color: var(--light-text-color); margin-bottom: 30px; }
+.hero-image img { width: 250px; height: 250px; border-radius: 50%; border: 8px solid var(--background-color); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); object-fit: cover; }
+.social-icons a { color: var(--light-text-color); font-size: 1.5rem; margin: 0 12px 0 0; text-decoration: none; transition: color 0.3s ease; }
+.social-icons a:hover { color: var(--secondary-color); }
+
+.about { background-color: var(--accent-color); }
+.about-wrapper { display: flex; align-items: center; gap: 50px; }
+.about-image { flex-basis: 40%; min-width: 300px; }
+.about-image img { width: 100%; border-radius: 15px; height: auto; }
+.about-content { flex-basis: 60%; }
+.about-intro { text-align: right; font-size: 1.15rem; color: var(--light-text-color); margin-bottom: 30px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.about-card { background-color: var(--card-bg-color); padding: 25px; border-radius: 15px; text-align: center; border: 1px solid var(--border-color); transition: transform 0.3s ease, background-color 0.3s ease; }
+.about-card:hover { transform: translateY(-5px); background-color: #2a5249; }
+.about-card .icon { font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px; }
+.about-card p { font-size: 1rem; color: var(--text-color); line-height: 1.6; margin: 0; }
+
+.portfolio { background-color: var(--background-color); }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.portfolio-card { background: var(--card-bg-color); border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); padding: 25px 30px; text-align: right; border: 1px solid var(--border-color); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.portfolio-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.2); border-color: var(--secondary-color); }
+.portfolio-card p { font-size: 1rem; color: var(--light-text-color); margin-bottom: 20px; }
+.pdf-icon { font-size: 2.5rem; color: var(--secondary-color); }
+.btn { display: inline-block; background-color: var(--secondary-color); color: #0d2a24; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: background-color 0.3s ease, transform 0.3s ease; }
+.btn:hover { background-color: var(--primary-color); color: var(--secondary-color); transform: scale(1.05); }
+.contact { background-color: var(--accent-color); }
+.clinics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; text-align: center; }
+.clinic-card { background: var(--card-bg-color); padding: 30px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); border: 1px solid var(--border-color); }
+.clinic-card h3 { font-size: 1.5rem; color: var(--secondary-color); }
+.clinic-card p { margin-bottom: 10px; line-height: 1.7; font-size: 1rem; }
+.clinic-card i { margin-left: 8px; color: var(--primary-color); }
+.clinic-card iframe { width: 100%; height: 250px; border: 0; border-radius: 10px; margin-top: 20px; }
+footer { background-color: #081f1a; color: var(--light-text-color); text-align: center; padding: 25px; border-top: 1px solid var(--border-color); }
+@media (max-width: 992px) {
+    .about-wrapper { flex-direction: column; }
+    .about-image { min-width: 100%; margin-bottom: 30px; }
+}
+@media (max-width: 768px) {
+    h2 { font-size: 1.8rem; } .hero .container { flex-direction: column-reverse; text-align: center; } .hero-text h1 { font-size: 2.5rem; } .hero-image img { width: 200px; height: 200px; } .social-icons { margin-top: 20px; }
+    .about-grid, .portfolio-grid, .clinics-grid { grid-template-columns: 1fr; }
+}

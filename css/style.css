@@ -59,6 +59,27 @@ section:last-of-type { border-bottom: none; }
 .clinic-card p { margin-bottom: 10px; line-height: 1.7; font-size: 1rem; }
 .clinic-card i { margin-left: 8px; color: var(--primary-color); }
 .clinic-card iframe { width: 100%; height: 250px; border: 0; border-radius: 10px; margin-top: 20px; }
+
+/* حل مشكلة الأرقام الزرقاء على الهاتف */
+.clinic-card p {
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+}
+
+.clinic-card p a {
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+}
+
+/* منع المتصفح من تحويل الأرقام إلى روابط */
+.clinic-card p {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 footer { background-color: #081f1a; color: var(--light-text-color); text-align: center; padding: 25px; border-top: 1px solid var(--border-color); }
 @media (max-width: 992px) {
     .about-wrapper { flex-direction: column; }
